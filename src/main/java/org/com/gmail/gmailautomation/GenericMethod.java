@@ -60,7 +60,7 @@ public class GenericMethod {
 
 
 
-	private void fn_click(WebElement ele) throws Throwable{
+	public void fn_click(WebElement ele) throws Throwable{
 		try{
 			ele.click();
 		}catch(Throwable e){
@@ -68,7 +68,7 @@ public class GenericMethod {
 			throw e;
 		}
 	}
-	private void fn_jsclick(WebElement ele) throws Throwable{
+	public void fn_jsclick(WebElement ele) throws Throwable{
 		try{
 			JavascriptExecutor executor = (JavascriptExecutor)driver;
 			executor.executeScript("arguments[0].click();", ele);
@@ -78,7 +78,7 @@ public class GenericMethod {
 
 	}
 
-	private void fn_Actionclick(WebElement ele) throws Throwable{
+	public void fn_Actionclick(WebElement ele) throws Throwable{
 		try{
 			Actions Actions=new Actions(driver);
 			Actions.click(ele).perform();;
@@ -87,7 +87,7 @@ public class GenericMethod {
 		}
 	}
 
-	private void fn_mouseoverelement(WebElement ele) throws Throwable{
+	public void fn_mouseoverelement(WebElement ele) throws Throwable{
 		try{
 			Actions builder=new Actions(driver);
 			builder.moveToElement(ele).build().perform();
@@ -98,7 +98,7 @@ public class GenericMethod {
 	}
 
 
-	private String fn_gettext(WebElement ele) throws Throwable{
+	public String fn_gettext(WebElement ele) throws Throwable{
 		try{
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			return ele.getText();
