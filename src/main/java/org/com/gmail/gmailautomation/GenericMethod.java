@@ -120,7 +120,7 @@ public class GenericMethod {
 		return randStr.toString();
 	}
 
-	private int getRandomNumber() {
+	public int getRandomNumber() {
 
 		int randomInt = 0;
 		Random randomGenerator = new Random();
